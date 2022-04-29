@@ -1,20 +1,21 @@
 package application;
 
-import model.dao.DaoFactory;
-import model.dao.SellerDAO;
-import model.entities.Seller;
+import java.util.Random;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		
-		SellerDAO sellerDAO = DaoFactory.createSellerDao();
+		Random random = new Random();
+		int numero = random.nextInt(13);
+        for (int i = 0; i < numero; i++) {
 
-		Seller seller = sellerDAO.findById(1);
-		
-		System.out.println(seller);
-		
-	}
+            if (i % 2 == 0) {
 
+                System.out.println(i+2);
+
+            }
+        }
+
+}
 }
